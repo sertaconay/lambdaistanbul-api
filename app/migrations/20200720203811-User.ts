@@ -6,21 +6,17 @@ export = {
     return queryInterface.createTable('users', {
       id: {
         type: DataType.INTEGER,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
       },
       email: {
-        allowNull: false,
         type: DataType.STRING,
         unique: true,
-      },
-      name: {
         allowNull: false,
-        type: DataType.STRING,
       },
       password: {
-        allowNull: false,
         type: DataType.STRING,
+        allowNull: false,
       },
       createdAt: {
         type: DataType.DATE,

@@ -6,8 +6,8 @@ export = {
     return queryInterface.createTable('posts', {
       id: {
         type: DataType.INTEGER,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
       },
       title: {
         type: DataType.STRING,
@@ -31,10 +31,10 @@ export = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
-      updatedAt: {
+      createdAt: {
         type: DataType.DATE,
       },
-      createdAt: {
+      updatedAt: {
         type: DataType.DATE,
       },
     });

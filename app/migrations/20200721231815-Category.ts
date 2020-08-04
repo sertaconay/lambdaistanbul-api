@@ -6,13 +6,13 @@ export = {
     return queryInterface.createTable('categories', {
       id: {
         type: DataType.INTEGER,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
       },
       name: {
-        allowNull: false,
         type: DataType.STRING,
         unique: true,
+        allowNull: false,
       },
 
     });

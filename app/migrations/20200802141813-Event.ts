@@ -6,25 +6,34 @@ export = {
     return queryInterface.createTable('events', {
       id: {
         type: DataType.INTEGER,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
       },
       title: {
         type: DataType.STRING,
         allowNull: false,
       },
-      description: {
+      content: {
         type: DataType.TEXT,
         allowNull: false,
+      },
+      time: {
+        type: DataType.DATE,
+      },
+      location: {
+        type: DataType.STRING,
+      },
+      attendees: {
+        type: DataType.STRING,
       },
       published: {
         type: DataType.TINYINT,
         defaultValue: 1,
       },
-      updatedAt: {
+      createdAt: {
         type: DataType.DATE,
       },
-      createdAt: {
+      updatedAt: {
         type: DataType.DATE,
       },
     });
